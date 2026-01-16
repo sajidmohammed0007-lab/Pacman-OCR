@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Pacman Movement">
+    <mxGraphModel grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/><mxCell id="1" parent="0"/>
+
+        <mxCell id="start" value="Game Loop Start" style="ellipse;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="160" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="input" value="Get Arrow Key Input" style="rounded=1;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="110" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dir" value="Set Direction Variable" style="rounded=1;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="190" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="next" value="Calculate Next Position" style="rounded=1;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="270" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="buffer" value="Apply Buffer / Variance" style="rounded=1;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="300" y="350" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="wall" value="Wall at Buffered Position?" style="rhombus;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="440" width="220" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="move" value="Move Pac-Man" style="rounded=1;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="end" value="Return to Game Loop" style="ellipse;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="300" y="650" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Connectors -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="start" target="input"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="input" target="dir"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="dir" target="next"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="next" target="buffer"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="buffer" target="wall"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="No" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="wall" target="move"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="Yes" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="wall" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="move" target="end"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
